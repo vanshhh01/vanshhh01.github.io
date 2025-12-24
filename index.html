@@ -3,83 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>media</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: black;
-            padding: 1rem;
-        }
-
-        .logo {
-            color: #fff;
-            font-size: 1.5rem;
-        }
-
-        .menu {
-            display: none;
-            flex-direction: column;
-            background: #444;
-            position: absolute;
-            top: 60px;
-            right: 20px;
-            width: 200px;
-        }
-
-        .menu a {
-            color: #fff;
-            padding: 1em;
-            text-decoration: none;
-            display: block;
-        }
-
-        .hamburger {
-            font-size: 2rem;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        /* Tablet & Desktop */
-        @media (min-width: 768px) {
-            .menu {
-                display: flex;
-                flex-direction: row;
-                position: static;
-                background: none;
-                width: auto;
-            }
-
-            .hamburger {
-                display: none;
-            }
-        }
-    </style>
+    <title>Spotify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-    <nav>
-        <div class="logo">MySite</div>
+    <div class="container">
+        
+        
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fa-brands fa-spotify"></i><span class="logo-text">Spotify</span>
+            </div>
 
-        <div class="hamburger">
-            <i class="fa-solid fa-bars"></i>
+            <div class="library-header">
+                <div class="library-title">
+                    <i class="fa-solid fa-swatchbook"></i>
+                    <span class="library-text">Your Library</span>
+                </div>
+                <div class="library-actions">
+                    <button class="chip"><i class="fa-solid fa-plus"></i> Create</button>
+
+                </div>
+            </div>
+
+            <div class="filter-chips">
+                <button class="chip">Playlists</button>
+                <button class="chip">Artists</button>
+                <button class="chip">Podcasts</button>
+            </div>
+
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1651382952263-ecf422e2845f?w=48&h=48&fit=crop" class="playlist-img">
+                <div class="playlist-info">
+                    <h4>Liked Songs</h4>
+                    <p><span class="pin-icon"><i class="fa-solid fa-thumbtack"></i></span> Playlist • 127 songs</p>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1757853232181-50893c43b441?w=48&h=48&fit=crop" class="playlist-img">
+                <div class="playlist-info">
+                    <h4>Feeling like Love</h4>
+                    <p>Playlist • 45 songs</p>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1556703588-6eae2585e025?w=48&h=48&fit=crop" class="playlist-img">
+                <div class="playlist-info">
+                    <h4>Whyyyyy???</h4>
+                    <p>Playlist • 62 songs</p>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1602848596140-33c2b48c6ade?w=48&h=48&fit=crop" class="playlist-img">
+                <div class="playlist-info">
+                    <h4>Going Against Flow</h4>
+                    <p>Playlist • 38 songs</p>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1484755560615-a4c64e778a6c?w=48&h=48&fit=crop" class="playlist-img">
+                <div class="playlist-info">
+                    <h4>Top Songs</h4>
+                    <p>Playlist • 14 songs</p>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=48&h=48&fit=crop" class="playlist-img">
+                <div class="playlist-info">
+                    <h4>Shreya Ghoshal Hits</h4>
+                    <p>Playlist • 28 songs</p>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1496208612508-eb52fba7d94e?w=48&h=48&fit=crop" class="playlist-img">
+                <div class="playlist-info">
+                    <h4>Arijit Singh</h4>
+                    <p>Playlist • 21 songs</p>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=48&h=48&fit=crop" class="playlist-img">
+                <div class="playlist-info">
+                    <h4>Mohit Chauhan</h4>
+                    <p>Playlist • 16 songs</p>
+                </div>
+            </div>
+            
+
+
         </div>
 
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+        
+
+        <div class="main-content">
+            <div class="top-bar">
+                <button class="home-btn"><i class="fa-solid fa-house"></i></button>
+                <div class="search-bar">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="What do you want to listen to?">
+                </div>
+                <div class="user-section">
+                    <button class="premium-btn">Explore Premium</button>
+                    <button class="user-btn"><i class="fa-solid fa-user"></i></button>
+                </div>
+            </div>
+
+            <h1 class="greeting">Good afternoon</h1>
+
+            <div class="quick-picks">
+                <div class="quick-pick-card">
+                    <img src="https://images.unsplash.com/photo-1651382952263-ecf422e2845f?w=100&h=100&fit=crop" class="quick-pick-img">
+                    <div class="quick-pick-title">Liked Songs</div>
+                </div>
+                <div class="quick-pick-card">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=100&h=100&fit=crop" class="quick-pick-img">
+                    <div class="quick-pick-title">Top Hits</div>
+                </div>
+                <div class="quick-pick-card">
+                    <img src="https://images.unsplash.com/photo-1504898770365-14faca6a7320?w=100&h=100&fit=crop" class="quick-pick-img">
+                    <div class="quick-pick-title">Rap & Hip-Hop</div>
+                </div>
+                <div class="quick-pick-card">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=100&h=100&fit=crop" class="quick-pick-img">
+                    <div class="quick-pick-title">Chill Vibes</div>
+                </div>
+                <div class="quick-pick-card">
+                    <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=100&h=100&fit=crop" class="quick-pick-img">
+                    <div class="quick-pick-title">Rock Classics</div>
+                </div>
+                <div class="quick-pick-card">
+                    <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=100&h=100&fit=crop" class="quick-pick-img">
+                    <div class="quick-pick-title">Workout Mix</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Jump back in</h2>
+                    <a href="#" class="show-all">SHOW ALL</a>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Acoustic Hits</div>
+                        <div class="card-desc">The best acoustic songs</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Piano Chill</div>
+                        <div class="card-desc">Relax with piano music</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1526394931762-90052e97b376?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Hip Hop Mix</div>
+                        <div class="card-desc">Hip hop beats</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Jazz Classics</div>
+                        <div class="card-desc">Smooth jazz vibes</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Rock Anthems</div>
+                        <div class="card-desc">Classic rock hits</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Recently played</h2>
+                    <a href="#" class="show-all">SHOW ALL</a>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Daily Mix 1</div>
+                        <div class="card-desc">Taylor Swift, Ed Sheeran</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1458560871784-56d23406c091?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Daily Mix 2</div>
+                        <div class="card-desc">Drake, The Weeknd</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Discover Weekly</div>
+                        <div class="card-desc">Fresh music for you</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Release Radar</div>
+                        <div class="card-desc">New releases</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">On Repeat</div>
+                        <div class="card-desc">Your favorite songs</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Today's biggest hits</h2>
+                    <a href="#" class="show-all">SHOW ALL</a>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Today's Top Hits</div>
+                        <div class="card-desc">The hottest tracks</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1499415479124-43c32433a620?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Viral Hits</div>
+                        <div class="card-desc">Trending songs</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1524650359799-842906ca1c06?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Pop Rising</div>
+                        <div class="card-desc">New pop songs</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Hot Hits</div>
+                        <div class="card-desc">Top songs</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1723924995430-b74c76bbcdfd?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Top 50</div>
+                        <div class="card-desc">Top hits</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">More of what you like</h2>
+                    <a href="#" class="show-all">SHOW ALL</a>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1652626627227-acc5ce198876?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">More Pop</div>
+                        <div class="card-desc">More hot pop tracks</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1496293455970-f8581aae0e3b?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">More Indie</div>
+                        <div class="card-desc">More trending indie</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1477233534935-f5e6fe7c1159?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">More Classical</div>
+                        <div class="card-desc">More classical songs</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">More Rock</div>
+                        <div class="card-desc">More top rock songs</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1461784121038-f088ca1e7714?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">More Favorites</div>
+                        <div class="card-desc">More worldwide hits</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">90's hits</h2>
+                    <a href="#" class="show-all">SHOW ALL</a>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">90's Hits</div>
+                        <div class="card-desc">Classic 90's tracks</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">90's Classics</div>
+                        <div class="card-desc">Timeless 90's songs</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1513829596324-4bb2800c5efb?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">90's Pop</div>
+                        <div class="card-desc">90's pop hits</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1594623930572-300a3011d9ae?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">90's Gems</div>
+                        <div class="card-desc">Hidden hits from the 90's</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">90's Top 50</div>
+                        <div class="card-desc">Top 90's hits</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Your top mixes</h2>
+                    <a href="#" class="show-all">SHOW ALL</a>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1466428996289-fb355538da1b?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Top Mix 1</div>
+                        <div class="card-desc">Your top tracks</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1517230878791-4d28214057c2?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Top Mix 2</div>
+                        <div class="card-desc">Trending mixes</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1508854710579-5cecc3a9ff17?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Pop Mix</div>
+                        <div class="card-desc">New pop mixes</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1497911270199-1c552ee64aa4?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Regional Mix</div>
+                        <div class="card-desc">Top regional mixes</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1462965326201-d02e4f455804?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Global Mix</div>
+                        <div class="card-desc">Worldwide hits mix</div>
+                    </div>
+                </div>
+            </div>
+
+ 
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Made for you</h2>
+                    <a href="#" class="show-all">SHOW ALL</a>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1445985543470-41fba5c3144a?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Your Mix</div>
+                        <div class="card-desc">Based on your taste</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1542208998-f6dbbb27a72f?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Liked Songs</div>
+                        <div class="card-desc">127 songs</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Time Capsule</div>
+                        <div class="card-desc">Nostalgic hits</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Mood Booster</div>
+                        <div class="card-desc">Feel-good music</div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=300&h=300&fit=crop" class="card-img">
+                        <div class="card-title">Chill Beats</div>
+                        <div class="card-desc">Lo-fi relaxing</div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
+    </div>
 </body>
 </html>
