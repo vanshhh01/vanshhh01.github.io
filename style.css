@@ -464,6 +464,14 @@ margin-right: 0;
     .sidebar{
         display: none;
     }
+    .container{
+        padding: 0;
+        margin: 0;
+    }
+    .main-content{
+        padding: 16px 10px;
+        
+    }
     
     
 }
