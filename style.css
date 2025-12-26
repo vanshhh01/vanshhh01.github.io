@@ -6,8 +6,21 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #000;
+    background: #0c0c0c;
     color: #fff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0c0c0c;
+    z-index: 10;
+    padding: 0.5rem 0.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .container {
@@ -15,6 +28,7 @@ body {
     height: 100vh;
     padding: 8px;
     gap: 8px;
+    padding-top: 65px;
 }
 
 
@@ -23,25 +37,53 @@ body {
     background: #121212;
     border-radius: 8px;
     padding: 12px;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
     scrollbar-width: none;
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 32px;
     font-weight: bold;
     padding: 8px;
     color: #1db954;
-    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .logo i {
     margin-right: 8px;
-    color:#1db954 ;
+    color:#1db954;
 }
 
 .logo-text {
+    font-size: 20px;
     display: inline;
+}
+
+
+
+.sidebar-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sidebar-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.playlist-container {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .library-header {
@@ -74,10 +116,6 @@ body {
     font-size: 20px;
 }
 
-.library-actions {
-    display: flex;
-    gap: 4px;
-}
 
 .library-btn {
     width: 28px;
@@ -170,27 +208,31 @@ body {
     border-radius: 8px;
     overflow-y: auto;
     scrollbar-width: none;
-    padding: 16px 24px;
+    padding: 10px 24px;
 }
 
 
-.top-bar {
+
+
+.search-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    gap: 0.5rem;
+    flex: 1;
+    max-width: 25rem;
 }
 
 .home-btn {
     aspect-ratio: 1/1;
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     border: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .home-btn:hover {
@@ -199,9 +241,7 @@ body {
 
 .search-bar {
     position: relative;
-    flex: 1;
-    max-width: 350px;
-    margin: 0 16px;
+    width: 25rem;
     border: 2px solid #484848;
     border-radius: 50px;
     
@@ -209,21 +249,20 @@ body {
 
 .search-icon {
     position: absolute;
-    left: 12px;
-    top: 10px;
+    left: 0.75rem;
+    top: 0.625rem;
     color: #b3b3b3;
-    font-size: 17px;
+    font-size: 1.0625rem;
 }
 
 .search-input {
     width: 100%;
-    padding: 10px 16px 10px 40px;
+    padding: 0.625rem 1rem 0.625rem 2.5rem;
     border: none;
     border-radius: 20px;
     background: #2b2b2b;
     color: #ffffff;
-    
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .search-input::placeholder {
@@ -383,29 +422,11 @@ body {
 }
 
 @media (max-width: 768px) {
-
     .sidebar {
         width: 70px;
         padding: 4px;
     }
 
-    .logo {
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 45px;
-margin-bottom: 8px;
-}
-
-.logo i {
-margin-right: 0;
-}
-
-    .logo-text {
-        display: none;
-    }
-
-    
 
     .library-header {
         justify-content: center;
@@ -424,10 +445,6 @@ margin-right: 0;
     }
     
 
-    .library-actions {
-        display: none;
-    }
-
     .playlist-info{
         display: none;
     }
@@ -440,7 +457,9 @@ margin-right: 0;
         
     }
 
-
+    .search-container {
+        max-width: 25rem;
+    }
 
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -448,6 +467,9 @@ margin-right: 0;
     .premium-btn {
         display: none;
     }
+
+    
+    
 }
 
 @media (max-width: 500px) {
@@ -464,13 +486,14 @@ margin-right: 0;
     .sidebar{
         display: none;
     }
-    .container{
-        padding: 0;
-        margin: 0;
-    }
+    
     .main-content{
         padding: 16px 10px;
         
+    }
+
+    .logo-text{
+        display: none;
     }
     
     

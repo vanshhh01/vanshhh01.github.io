@@ -8,22 +8,45 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <i class="fa-brands fa-spotify"></i><span class="logo-text">Spotify</span>
+        </div>
+        <div class="search-container">
+            <button class="home-btn"><i class="fa-solid fa-house"></i></button>
+            <div class="search-bar">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="What do you want to listen to?">
+            </div>
+        </div>
+        <div class="user-section">
+            <button class="premium-btn">Explore Premium</button>
+            <button class="user-btn"><i class="fa-solid fa-user"></i></button>
+        </div>
+    </header>
     <div class="container">
         
         
         <div class="sidebar">
-            <div class="logo">
-                <i class="fa-brands fa-spotify"></i><span class="logo-text">Spotify</span>
+
+            <div class="library-header">
+                <div class="library-title">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="library-text">Home</span>
+                </div>
+            </div>
+
+            <div class="library-header">
+                <div class="library-title">
+                    <i class="fa-solid fa-search"></i>
+                    <span class="library-text">Search</span>
+                </div>
             </div>
 
             <div class="library-header">
                 <div class="library-title">
                     <i class="fa-solid fa-swatchbook"></i>
                     <span class="library-text">Your Library</span>
-                </div>
-                <div class="library-actions">
-                    <button class="chip"><i class="fa-solid fa-plus"></i> Create</button>
-
                 </div>
             </div>
 
@@ -33,7 +56,8 @@
                 <button class="chip">Podcasts</button>
             </div>
 
-            <div class="playlist-item">
+            <div class="playlist-container">
+                <div class="playlist-item">
                 <img src="https://images.unsplash.com/photo-1651382952263-ecf422e2845f?w=48&h=48&fit=crop" class="playlist-img">
                 <div class="playlist-info">
                     <h4>Liked Songs</h4>
@@ -112,7 +136,7 @@
                     <p>Playlist • 62 songs</p>
                 </div>
             </div>
-            
+            </div>
 
 
         </div>
@@ -120,18 +144,6 @@
         
 
         <div class="main-content">
-            <div class="top-bar">
-                <button class="home-btn"><i class="fa-solid fa-house"></i></button>
-                <div class="search-bar">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" class="search-input" placeholder="What do you want to listen to?">
-                </div>
-                <div class="user-section">
-                    <button class="premium-btn">Explore Premium</button>
-                    <button class="user-btn"><i class="fa-solid fa-user"></i></button>
-                </div>
-            </div>
-
             <h1 class="greeting">Good afternoon</h1>
 
             <div class="quick-picks">
