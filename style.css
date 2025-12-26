@@ -21,7 +21,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
 }
 
 .container {
@@ -241,7 +240,7 @@ header {
 
 .search-bar {
     position: relative;
-    width: 400px;
+    width: 35%;
     margin-right: 15%;
     border: 2px solid #484848;
     border-radius: 50px;
@@ -423,6 +422,10 @@ header {
 }
 
 @media (max-width: 768px) {
+
+    .search-bar{
+        width: 80%;
+    }
 
 .home-btn{
     margin-left: 10%;
