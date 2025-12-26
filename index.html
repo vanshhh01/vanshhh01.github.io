@@ -120,22 +120,6 @@
                     <p>Playlist • 16 songs</p>
                 </div>
             </div>
-
-            <div class="playlist-item">
-                <img src="https://images.unsplash.com/photo-1757853232181-50893c43b441?w=48&h=48&fit=crop" class="playlist-img">
-                <div class="playlist-info">
-                    <h4>Feeling like Love</h4>
-                    <p>Playlist • 45 songs</p>
-                </div>
-            </div>
-
-            <div class="playlist-item">
-                <img src="https://images.unsplash.com/photo-1556703588-6eae2585e025?w=48&h=48&fit=crop" class="playlist-img">
-                <div class="playlist-info">
-                    <h4>Whyyyyy???</h4>
-                    <p>Playlist • 62 songs</p>
-                </div>
-            </div>
             </div>
 
 
@@ -417,5 +401,33 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+    <script>
+        // Make search bar functional: filter cards based on input
+        const searchInput = document.querySelector('.search-input');
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                if (title.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Home button: scroll to top
+        const homeBtn = document.querySelector('.home-btn');
+        homeBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Premium button: open Spotify Premium page
+        const premiumBtn = document.querySelector('.premium-btn');
+        premiumBtn.addEventListener('click', () => {
+            window.open('https://www.spotify.com/premium/', '_blank');
+        });
+
+        // User button: show alert (placeholder for user menu)
+        const userBtn = document.querySelector('.user-btn');
