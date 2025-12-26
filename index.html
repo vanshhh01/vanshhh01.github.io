@@ -401,33 +401,6 @@
             </div>
         </div>
     </div>
-    <script>
-        // Make search bar functional: filter cards based on input
-        const searchInput = document.querySelector('.search-input');
-        searchInput.addEventListener('input', function() {
-            const query = this.value.toLowerCase();
-            const cards = document.querySelectorAll('.card');
-            cards.forEach(card => {
-                const title = card.querySelector('.card-title').textContent.toLowerCase();
-                if (title.includes(query)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-
-        // Home button: scroll to top
-        const homeBtn = document.querySelector('.home-btn');
-        homeBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Premium button: open Spotify Premium page
-        const premiumBtn = document.querySelector('.premium-btn');
-        premiumBtn.addEventListener('click', () => {
-            window.open('https://www.spotify.com/premium/', '_blank');
-        });
-
-        // User button: show alert (placeholder for user menu)
-        const userBtn = document.querySelector('.user-btn');
+</body>
+</html>
+    
